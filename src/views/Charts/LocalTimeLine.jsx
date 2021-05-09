@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 
 // reactstrap components
 import { Container, Row, Col, Card, CardHeader } from "reactstrap";
-import Moment from 'react-moment';
-import { Line, Bar } from 'react-chartjs-2';
+import { Bar } from 'react-chartjs-2';
 
 import { fetchTimeLineData } from '../../api';
 
