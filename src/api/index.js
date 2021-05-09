@@ -5,6 +5,7 @@ const url = 'https://covid19.mathdro.id/api';
 var settings = {
     getCurrentStatistical: "https://www.hpb.health.gov.lk/api/get-current-statistical",
     coronaTimeline: "https://corona-api.com/timeline",
+    localTimeline: "https://corona-api.com/countries/lk",
 };
 
 export const fetchDailyLocalData = async () => {
@@ -44,6 +45,35 @@ export const fetchDailyGlobalData = async () => {
             deaths:dailyData.deaths,
             new_deaths:dailyData.new_deaths,
             updated_at:dailyData.updated_at,
+        };
+
+        return modifiedData;
+    }
+    catch (error) {
+        console.log(error);
+    }
+}
+
+export const fetchTimeLineData = async () => {
+    try {
+        const  { data }  = await axios.get(settings.localTimeline);
+
+        const dailyData = data.data;
+
+        let timeline_date = [];
+        let new_confirmed = [];
+        let j=310;
+        let k=dailyData.timeline.length-j;
+
+        let i;
+        for (i = k; i >= 0; i--) {
+            timeline_date.push(dailyData.timeline[i].date.substr(5,5));
+            new_confirmed.push(dailyData.timeline[i].new_confirmed);
+        }
+
+        const modifiedData = {
+            timeline_date:timeline_date,
+            new_confirmed:new_confirmed,
         };
 
         return modifiedData;

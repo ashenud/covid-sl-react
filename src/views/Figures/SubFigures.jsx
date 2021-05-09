@@ -5,32 +5,6 @@ import { Col, Card, CardBody, CardTitle, CardFooter } from "reactstrap";
 import CountUp from 'react-countup';
 
 export default function SubFigures({ count, name, icon, color_class }) {
-  
-    // if(!count) {
-    //     return (
-    //         <React.Fragment>           
-    //             <Col xl="6" sm="4" className="card-col">
-    //                 <Card className={"card-stats "+ color_class}> 
-    //                     <CardBody >
-    //                         <div className="details d-flex">
-    //                             <div className={"card-icon "+ color_class}>
-    //                                 <i className={icon}></i>
-    //                             </div>
-    //                             <CardTitle>
-    //                                 <h3 id="total-cases">
-    //                                     Loading...!
-    //                                 </h3>
-    //                             </CardTitle>
-    //                         </div>
-    //                     </CardBody>
-    //                     <CardFooter>
-    //                         <p className="card-category">{name}</p>
-    //                     </CardFooter>
-    //                 </Card> 
-    //             </Col>
-    //         </React.Fragment>
-    //     );
-    // }
 
     return (
         <React.Fragment>           
@@ -55,4 +29,5 @@ export default function SubFigures({ count, name, icon, color_class }) {
             </Col>
         </React.Fragment>
     );
+    
 }

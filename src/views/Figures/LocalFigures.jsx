@@ -39,9 +39,9 @@ const LocalFigures = () => {
                             <SubFigures count={dailyData.suspected} name={"SUSPECTED"} icon={"fas fa-clinic-medical"} color_class={"three"}/>
                             <SubFigures count={dailyData.recovered} name={"RECOVERED"} icon={"fas fa-hand-holding-heart"} color_class={"two"}/>
                         </Row>
-                        <div class="card-footer time-footer">
-                            <div class="row update-time">
-                                <p class="card-category">
+                        <div className="card-footer time-footer">
+                            <div className="row update-time">
+                                <p className="card-category">
                                     Last time update on <span id="update-global-date"><Moment format="YYYY-MM-DD">{dailyData.updated_at}</Moment></span> at <span id="update-global-time"><Moment format="hh:mm">{dailyData.updated_at}</Moment></span>
                                 </p>
                             </div>

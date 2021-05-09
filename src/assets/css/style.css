@@ -42,8 +42,8 @@ body, html {
 
 
 /*-- navbar --*/
-.navbar {
-    background-color: rgba(20,20,20,0.9);
+.bg-nav {
+    background-color: rgb(32 32 32 / 90%) !important;
 }
 
 .navbar-brand {
@@ -73,9 +73,17 @@ body, html {
 .sidebar-collapse .navbar-collapse:before {
     background: linear-gradient(90deg, rgba(20,20,20,1) 0%, rgba(82,77,77,0.7) 100%);
 }
+
+.collapse-brand a {
+    color: #fff;
+}
+
 /*-- end navbar --*/
 
-
+.page-header {
+    height: auto !important;
+    max-height: inherit;
+}
 
 /*-- animated circle area --*/
 .index-page {
@@ -235,8 +243,8 @@ body, html {
     padding: 5px;
 }
 
-.chart-timeline {
-    max-height: 313px;
+.chartjs-render-monitor {
+    max-height: 328px;
 }
 
 .chart-timeline-si {
@@ -604,6 +612,13 @@ body, html {
     }
 }
 
+@media screen and (max-width: 991px) {
+    .navbar-collapse {
+        background: #3e3e3e;
+    }
+
+}
+
 
 @media all and (max-width: 950px) {
     /* #map-wrapper .figure-heding h4 {
@@ -723,7 +738,6 @@ body, html {
         min-height: 209px;
     }
 }
-
 
 /*-- colors --*/
 .onec {

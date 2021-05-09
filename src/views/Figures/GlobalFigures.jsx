@@ -19,11 +19,11 @@ const GlobalFigures = () => {
         fetchAPI();
     }, []);
 
-    console.log(dailyData);
+    // console.log(dailyData);
 
     return (
         <React.Fragment>
-            <Col xl="3" lg="6" md="12" className="local order-1">
+            <Col xl="3" lg="6" md="12" className="global order-xl-3 order-2">
                 <Card className="card-area mt-4 mb-1">
                     <Container fluid={true}>                                        
                         <Row>
@@ -39,9 +39,9 @@ const GlobalFigures = () => {
                             <SubFigures count={dailyData.deaths} name={"DEATHS"} icon={"fas fa-heart-broken"} color_class={"one"}/>
                             <SubFigures count={dailyData.new_deaths} name={"NEW DEATHS"} icon={"fas fa-clinic-medical"} color_class={"one"}/>
                         </Row>
-                        <div class="card-footer time-footer">
-                            <div class="row update-time">
-                                <p class="card-category">
+                        <div className="card-footer time-footer">
+                            <div className="row update-time">
+                                <p className="card-category">
                                     Last time update on <span id="update-global-date"><Moment format="YYYY-MM-DD">{dailyData.updated_at}</Moment></span> at <span id="update-global-time"><Moment format="hh:mm">{dailyData.updated_at}</Moment></span>
                                 </p>
                             </div>

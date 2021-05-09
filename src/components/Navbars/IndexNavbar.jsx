@@ -19,7 +19,7 @@ export default function IndexNavbar() {
 
 	const changeColor = () => {
 		if ( document.documentElement.scrollTop > 99 || document.body.scrollTop > 99 ) {
-			setColor("bg-info");
+			setColor("bg-nav");
 		} 
 		else if ( document.documentElement.scrollTop < 100 || document.body.scrollTop < 100 ) {
 			setColor("navbar-transparent");
@@ -59,7 +59,7 @@ export default function IndexNavbar() {
 						<Row>
 							<Col className="collapse-brand" xs="6">
 								<a href="#pablo" onClick={(e) => e.preventDefault()}>
-									BLK•React
+									COVID-19
 								</a>
 							</Col>
 							<Col className="collapse-close text-right" xs="6">
@@ -71,19 +71,19 @@ export default function IndexNavbar() {
 					</div>
 					<Nav navbar>
 						<NavItem className="p-0">
-							<NavLink data-placement="bottom" href="https://twitter.com/CreativeTim" rel="noopener noreferrer" target="_blank" title="Follow us on Twitter">
+							<NavLink data-placement="bottom" href="#figures" rel="noopener noreferrer">
 								<i className="tim-icons icon-single-copy-04"></i>
 								<p>figures</p>
 							</NavLink>
 						</NavItem>
 						<NavItem className="p-0">
-							<NavLink data-placement="bottom" href="https://www.facebook.com/CreativeTim" rel="noopener noreferrer" target="_blank" title="Like us on Facebook">
+							<NavLink data-placement="bottom" href="#hospital" rel="noopener noreferrer">
 								<i className="tim-icons icon-sound-wave"></i>
 								<p>hospital data</p>
 							</NavLink>
 						</NavItem>
 						<NavItem className="p-0">
-							<NavLink data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" rel="noopener noreferrer" target="_blank" title="Follow us on Instagram">
+							<NavLink data-placement="bottom" href="#!" rel="noopener noreferrer">
 								<img src={require("assets/img/eng-to-si.png").default} className="language" alt="" />
 								<p className="normal-sinhala fontsize5-si ml-1">සිංහල භාෂාවට</p>
 							</NavLink>
