@@ -1,40 +1,8 @@
-/*!
-
-=========================================================
-* BLK Design System React - v1.2.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/blk-design-system-react/blob/main/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 import { Link } from "react-router-dom";
+
 // reactstrap components
-import {
-	Button,
-	Collapse,
-	DropdownToggle,
-	DropdownMenu,
-	DropdownItem,
-	UncontrolledDropdown,
-	NavbarBrand,
-	Navbar,
-	NavItem,
-	NavLink,
-	Nav,
-	Container,
-	Row,
-	Col,
-	UncontrolledTooltip,
-} from "reactstrap";
+import { Collapse, NavbarBrand, Navbar, NavItem, NavLink, Nav, Container, Row, Col, UncontrolledTooltip } from "reactstrap";
 
 export default function IndexNavbar() {
 
@@ -68,18 +36,13 @@ export default function IndexNavbar() {
 	const onCollapseExited = () => {
 		setCollapseOut("");
 	};
-	const scrollToDownload = () => {
-		document
-		.getElementById("download-section")
-		.scrollIntoView({ behavior: "smooth" });
-	};
-
+	
 	return (
 		<Navbar className={"fixed-top " + color} color-on-scroll="100" expand="lg">
 			<Container fluid={true}>
 				<div className="navbar-translate">
 					<NavbarBrand to="/" tag={Link} id="navbar-brand">
-						<img src={require("assets/img/icon-bw.png").default} />
+						<img src={require("assets/img/icon-bw.png").default} alt=""/>
 						<span>COVID-19 </span>
 					</NavbarBrand>
 					<UncontrolledTooltip placement="bottom" target="navbar-brand">
@@ -121,7 +84,7 @@ export default function IndexNavbar() {
 						</NavItem>
 						<NavItem className="p-0">
 							<NavLink data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" rel="noopener noreferrer" target="_blank" title="Follow us on Instagram">
-								<img src={require("assets/img/eng-to-si.png").default} className="language" />
+								<img src={require("assets/img/eng-to-si.png").default} className="language" alt="" />
 								<p className="normal-sinhala fontsize5-si ml-1">සිංහල භාෂාවට</p>
 							</NavLink>
 						</NavItem>

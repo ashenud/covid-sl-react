@@ -1,47 +1,55 @@
-/*!
-
-=========================================================
-* BLK Design System React - v1.2.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/blk-design-system-react/blob/main/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 
 // reactstrap components
-import {    
-  Container,
-  Row,
-  Col,
-  Button,
-  Card, CardText, CardHeader, CardBody, CardLink, CardTitle, CardFooter
-} from "reactstrap";
+import { Col, Card, CardBody, CardTitle, CardFooter } from "reactstrap";
+import CountUp from 'react-countup';
 
-export default function SubFigures() {
+export default function SubFigures({ count, name, icon, color_class }) {
   
+    // if(!count) {
+    //     return (
+    //         <React.Fragment>           
+    //             <Col xl="6" sm="4" className="card-col">
+    //                 <Card className={"card-stats "+ color_class}> 
+    //                     <CardBody >
+    //                         <div className="details d-flex">
+    //                             <div className={"card-icon "+ color_class}>
+    //                                 <i className={icon}></i>
+    //                             </div>
+    //                             <CardTitle>
+    //                                 <h3 id="total-cases">
+    //                                     Loading...!
+    //                                 </h3>
+    //                             </CardTitle>
+    //                         </div>
+    //                     </CardBody>
+    //                     <CardFooter>
+    //                         <p className="card-category">{name}</p>
+    //                     </CardFooter>
+    //                 </Card> 
+    //             </Col>
+    //         </React.Fragment>
+    //     );
+    // }
+
     return (
         <React.Fragment>           
             <Col xl="6" sm="4" className="card-col">
-                <Card className="card-stats one"> 
+                <Card className={"card-stats "+ color_class}> 
                     <CardBody >
                         <div className="details d-flex">
-                            <div className="card-icon one">
-                                <i className="fas fa-clipboard-list"></i>
+                            <div className={"card-icon "+ color_class}>
+                                <i className={icon}></i>
                             </div>
-                            <CardTitle><h3 id="total-cases"></h3></CardTitle>
+                            <CardTitle>
+                                <h3 id="total-cases">
+                                    { !count ? "Loading" : <CountUp start={0} end={count} duration={2.5} separator=","/>}
+                                </h3>
+                            </CardTitle>
                         </div>
                     </CardBody>
                     <CardFooter>
-                        <p className="card-category">Confirmed</p>
+                        <p className="card-category">{name}</p>
                     </CardFooter>
                 </Card> 
             </Col>
