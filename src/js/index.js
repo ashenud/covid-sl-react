@@ -24,15 +24,19 @@ export const getModifiedChartData = (timeLineData,type) => {
                 datasets_backgroundColor: '#f44336',
                 datasets_fill: true,
                 datasets_barPercentage: '0.4',
+                legend_display: false,
+                yAxes_beginAtZero: true,
                 yAxes_stepSize: 250,
                 yAxes_fontSize: 7,
                 yAxes_fontColor: 'rgba(255, 255, 255, 0.7)',
-                yAxes_padding: 5,
+                yAxes_padding: 5,               
+                yAxes_gridLines: false,
                 xAxes_fontColor: 'rgba(255, 255, 255, 0.7)',
                 xAxes_fontSize: 9,
                 xAxes_padding: 10,
                 xAxes_autoSkipPadding: 10,
-                xAxes_maxRotation: 0 
+                xAxes_maxRotation: 0,
+                xAxes_gridLines: false
             };
 
         }
@@ -54,15 +58,19 @@ export const getModifiedChartData = (timeLineData,type) => {
                 datasets_backgroundColor: 'rgba(76, 175, 80, 0.6)',
                 datasets_fill: true,
                 datasets_barPercentage: '0.4',
+                legend_display: false,
+                yAxes_beginAtZero: true,
                 yAxes_stepSize: 250,
                 yAxes_fontSize: 7,
                 yAxes_fontColor: 'rgba(255, 255, 255, 0.7)',
-                yAxes_padding: 5,
+                yAxes_padding: 5,               
+                yAxes_gridLines: false,
                 xAxes_fontColor: 'rgba(255, 255, 255, 0.7)',
                 xAxes_fontSize: 9,
                 xAxes_padding: 10,
                 xAxes_autoSkipPadding: 15,
-                xAxes_maxRotation: 0 
+                xAxes_maxRotation: 0,                
+                xAxes_gridLines: false
             };
 
         }

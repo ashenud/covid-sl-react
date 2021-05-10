@@ -20,12 +20,12 @@ const BarChart = ( {chartData} ) => {
             }}
             options={{
                 legend: {
-                    display: false
+                    display: chartData.legend_display
                 },
                 scales: {
                     yAxes: [{
                         ticks: {
-                            beginAtZero: true,
+                            beginAtZero: chartData.beginAtZero,
                             stepSize: chartData.yAxes_stepSize,
                             fontColor: chartData.yAxes_fontColor,                           
                             fontSize: chartData.yAxes_fontSize,
@@ -48,16 +48,10 @@ const BarChart = ( {chartData} ) => {
                     mode: 'index',
                     intersect: false,
                     callbacks: {
-                        // this callback is used to create the tooltip label
                         label: function (tooltipItem, data) {
-                            // get the data label and data value to display
-                            // convert the data value to local string so it uses a comma seperated number
                             var dataLabel = data.datasets[tooltipItem.datasetIndex].label;
                             var value = ': ' + data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index].toLocaleString();
-
                             dataLabel += value;
-
-                            // return the text to display on the tooltip
                             return dataLabel;
                         }
                     }
