@@ -37,7 +37,7 @@ const GlobalFigures = () => {
                             <SubFigures count={dailyData.new_cases} name={"NEW"} icon={"fas fa-ambulance"} color_class={"one"}/>
                             <SubFigures count={dailyData.recovered} name={"RECOVERED"} icon={"fas fa-hand-holding-heart"} color_class={"two"}/>
                             <SubFigures count={dailyData.deaths} name={"DEATHS"} icon={"fas fa-heart-broken"} color_class={"one"}/>
-                            <SubFigures count={dailyData.new_deaths} name={"NEW DEATHS"} icon={"fas fa-clinic-medical"} color_class={"one"}/>
+                            <SubFigures count={dailyData.new_deaths} name={"NEW DEATHS"} icon={"fas fa-heart-broken"} color_class={"one"}/>
                         </Row>
                         <div className="card-footer time-footer">
                             <div className="row update-time">

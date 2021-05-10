@@ -3,6 +3,7 @@ import React from "react";
 import LocalFigures from "views/Figures/LocalFigures";
 import GlobalFigures from "views/Figures/GlobalFigures";
 import LocalTimeLine from "views/Charts/LocalTimeLine";
+import LocalSideBar from "views/Charts/LocalSideBar";
 
 export default function MainContents() {
   return (
@@ -10,6 +11,7 @@ export default function MainContents() {
         <LocalFigures />
         <GlobalFigures />
         <LocalTimeLine />
+        <LocalSideBar />
     </React.Fragment >
   );
 }
