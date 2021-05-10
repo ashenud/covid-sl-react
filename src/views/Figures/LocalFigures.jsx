@@ -20,6 +20,8 @@ const LocalFigures = () => {
     }, []);
 
     // console.log(dailyData);
+    if(dailyData.total_cases)
+    document.title = '('+dailyData.total_cases.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") +') Coronavirus Sri Lanka - Analytics Dashboard';
 
     return (
         <React.Fragment>

@@ -17,7 +17,7 @@
 */
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import "assets/css/nucleo-icons.css";
 import "assets/scss/blk-design-system-react.scss?v=1.2.0";
@@ -30,8 +30,7 @@ import App from "views/App";
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route path="/figures" render={(props) => <App {...props} />} />
-      <Redirect from="/" to="/figures" />
+      <Route path="/" render={(props) => <App {...props} />} />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")
