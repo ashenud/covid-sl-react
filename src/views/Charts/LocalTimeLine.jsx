@@ -9,7 +9,8 @@ const LocalTimeLine = () => {
     const daily_case_data = {
         card_header:"Daily Cases (LOCAL)",
         color_class:"one",
-        type:"daily_cases",
+        type:"local",
+        data_type:"daily_cases",
         chart_type:"bar",
     }
 

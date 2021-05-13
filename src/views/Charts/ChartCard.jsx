@@ -6,25 +6,30 @@ import { Container, Row,  Card, CardHeader } from "reactstrap";
 import { fetchTimeLineData } from '../../api';
 import { getModifiedChartData } from '../../js';
 import  BarChart  from "./BarChart";
+import  DoughnutChart  from "./DoughnutChart";
+import  LineChart  from "./LineChart";
 
 const ChartCard = ( {data} ) => {
 
-    const [timeLineData, setTimeLineData] = useState({});
-
-    const country = "lk";
+    const [chartCardData, setChartCardData] = useState({
+        timeLineData : {},
+    });
 
     useEffect( () => {
         const fetchAPI = async () => {
-            setTimeLineData(await fetchTimeLineData(country));
+            setChartCardData({
+                timeLineData : await fetchTimeLineData(data.type)
+            });
         }
         fetchAPI();
-    }, []);
-
+    }, [data.type]);
 
     var modifiedData = {};
 
-    if(timeLineData.timeline)
-        modifiedData = getModifiedChartData(timeLineData,data.type)
+    if(chartCardData.timeLineData.timeline || chartCardData.timeLineData[0])
+        modifiedData = getModifiedChartData(chartCardData.timeLineData,data.data_type)
+
+    // console.log(chartCardData.timeLineData);
 
     return (
         <React.Fragment>            
@@ -36,7 +41,12 @@ const ChartCard = ( {data} ) => {
                         </CardHeader>
                     </Row>
                     <div className={"card-body chart-body "+data.color_class}>
-                        {(data.chart_type === 'bar') ? <BarChart chartData={modifiedData}/> : null}
+                        { (data.chart_type === 'bar') ? 
+                                <BarChart chartData={modifiedData}/> : 
+                                    (data.chart_type === 'doughnut') ? 
+                                        <DoughnutChart chartData={modifiedData}/> :
+                                            (data.chart_type === 'line') ? 
+                                                <LineChart chartData={modifiedData}/> : null }
                     </div>
                 </Container>
             </Card>

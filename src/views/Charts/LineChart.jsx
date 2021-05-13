@@ -1,28 +1,38 @@
 import React from "react";
 
-import { Bar } from 'react-chartjs-2';
+import { Line } from 'react-chartjs-2';
 
-const BarChart = ( {chartData} ) => {
+const LineChart = ( {chartData} ) => {
 
-    const barChart = (
+    const lineChart = (
 
-        <Bar
+        <Line
             data={{
                 labels: chartData.data_labels,
                 datasets: chartData.datasets,
             }}
             options={{
                 legend: {
-                    display: chartData.legend_display
+                    display: chartData.legend_display,
+                    position: chartData.legend_position,
+                    labels: {
+                        usePointStyle: chartData.legend_labels_usePointStyle,
+                        fontColor: chartData.legend_labels_fontColor,
+                        fontSize: chartData.legend_labels_fontSize,
+                    },
                 },
                 scales: {
                     yAxes: [{
+                        type: chartData.yAxes_type,
                         ticks: {
                             beginAtZero: chartData.beginAtZero,
                             stepSize: chartData.yAxes_stepSize,
                             fontColor: chartData.yAxes_fontColor,                           
                             fontSize: chartData.yAxes_fontSize,
                             padding: chartData.yAxes_padding,
+                            callback: function (value, index, values) {
+                                return value / chartData.yAxes_callback_size + chartData.yAxes_callback_mark;
+                            }
                         },
                         gridLines: false
                     }],
@@ -49,15 +59,19 @@ const BarChart = ( {chartData} ) => {
                         }
                     }
                 },
+                hover: {
+                    mode: chartData.hover_mode,
+                    intersect: chartData.hover_intersect
+                },
             }}
         /> 
     );
 
     return (
         <React.Fragment>
-            {barChart}
+            {lineChart}
         </React.Fragment>
     );
 }
 
-export default BarChart;
+export default LineChart;

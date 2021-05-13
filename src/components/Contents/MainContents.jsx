@@ -4,6 +4,8 @@ import LocalFigures from "views/Figures/LocalFigures";
 import GlobalFigures from "views/Figures/GlobalFigures";
 import LocalTimeLine from "views/Charts/LocalTimeLine";
 import LocalSideBar from "views/Charts/LocalSideBar";
+import GlobalSideBar from "views/Charts/GlobalSideBar";
+import MapArea from "views/Map/MapArea";
 
 export default function MainContents() {
   return (
@@ -12,6 +14,8 @@ export default function MainContents() {
         <GlobalFigures />
         <LocalTimeLine />
         <LocalSideBar />
+        <MapArea />
+        <GlobalSideBar />
     </React.Fragment >
   );
 }
