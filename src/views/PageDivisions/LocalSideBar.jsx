@@ -33,7 +33,7 @@ const LocalSideBar = () => {
 
     return (
         <React.Fragment>
-            <Col md="6" xl="3" className="order-xl-4 order-4 left-local">
+            <Col md="6" xl="3" className="order-xl-4 order-5 left-local">
                 <ChartCard data={local_recovery_data}/>
                 <ChartCard data={local_total_breakdown}/>
                 <ChartCard data={local_total_vs_active}/>

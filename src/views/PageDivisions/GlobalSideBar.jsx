@@ -33,7 +33,7 @@ const GlobalSideBar = () => {
 
     return (
         <React.Fragment>
-            <Col md="6" xl="3" className="order-5 right-global">
+            <Col md="6" xl="3" className="order-6 right-global">
                 <ChartCard data={global_total_growth}/>
                 <ChartCard data={global_total_breakdown}/>
                 <ChartCard data={global_new_vs_recovery}/>

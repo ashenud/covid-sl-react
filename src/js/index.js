@@ -398,3 +398,58 @@ export const getModifiedChartData = (timeLineData,type) => {
         console.log(error);
     }
 }
+
+
+export const getModifiedMapData = (mapData,type) => {
+    try {
+
+        var modifiedData = [];
+
+        if(type === "static_map" && Array.isArray(mapData)) {
+
+            mapData.map((data, i) => {     
+
+                var featureOBJ = {
+                    "type": "Feature",
+                    "properties": {
+                        'camera': {
+                            center: [],
+                            bearing: -8.9,
+                            zoom: 11.68
+                        }
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": []
+                    }
+                };
+
+                featureOBJ.properties.DistrictEn = data.prefecture;
+                featureOBJ.properties.DistrictSin = data.prefecture_si;
+                featureOBJ.properties.Cases = parseInt(data.cases);
+                featureOBJ.properties.index = i - 1;
+                featureOBJ.properties.Recovered = parseInt(data.recovered);
+                featureOBJ.properties.Deaths = parseInt(data.deaths);
+
+                featureOBJ.properties.camera.center.push(data.longitude);
+                featureOBJ.properties.camera.center.push(data.latitude);
+
+                featureOBJ.geometry.coordinates.push(data.longitude);
+                featureOBJ.geometry.coordinates.push(data.latitude);
+                featureOBJ.properties.type = data.type;
+
+                modifiedData.push(featureOBJ)    
+                
+                return null; // callback of map
+                
+            });
+
+        }
+        
+        return modifiedData;
+
+    }
+    catch (error) {
+        console.log(error);
+    }
+}
