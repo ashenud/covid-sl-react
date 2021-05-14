@@ -2,7 +2,8 @@ import React from "react";
 
 // reactstrap components
 import { Col } from "reactstrap";
-import ChartCard from "./ChartCard";
+
+import ChartCard from "./SubDivisions/ChartCard";
 
 const LocalTimeLine = () => {
 

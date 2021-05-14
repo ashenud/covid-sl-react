@@ -5,7 +5,7 @@ import { Container, Row, Col, Card, CardHeader } from "reactstrap";
 import Moment from 'react-moment';
 
 
-import SubFigures from './SubFigures'
+import SubFigures from './SubDivisions/SubFigures';
 import { fetchDailyLocalData } from '../../api';
 
 const LocalFigures = () => {

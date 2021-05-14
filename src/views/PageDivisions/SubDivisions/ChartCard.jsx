@@ -3,11 +3,11 @@ import React, { useState, useEffect } from "react";
 // reactstrap components
 import { Container, Row,  Card, CardHeader } from "reactstrap";
 
-import { fetchTimeLineData } from '../../api';
-import { getModifiedChartData } from '../../js';
-import  BarChart  from "./BarChart";
-import  DoughnutChart  from "./DoughnutChart";
-import  LineChart  from "./LineChart";
+import { fetchTimeLineData } from '../../../api';
+import { getModifiedChartData } from '../../../js';
+import  BarChart  from "../../Charts/BarChart";
+import  DoughnutChart  from "../../Charts/DoughnutChart";
+import  LineChart  from "../../Charts/LineChart";
 
 const ChartCard = ( {data} ) => {
 
