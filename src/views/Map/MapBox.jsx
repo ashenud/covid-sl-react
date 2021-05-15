@@ -3,7 +3,7 @@ import { csv } from 'd3';
 
 import { getModifiedMapData } from '../../js';
 
-import mapboxgl from 'mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
+import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
 mapboxgl.accessToken = 'pk.eyJ1IjoiYXNoZW51ZCIsImEiOiJjazlsZG83ZDQwM2g0M2dxdTJ5OTQ4OHh1In0.j_bRFfw78u98EwF_pTaNWw';
 
 export default function App() {
@@ -29,7 +29,7 @@ export default function App() {
 
     modifiedData = getModifiedMapData(mapData,map_type);
 
-    console.log(modifiedData);
+    // console.log(modifiedData);
 
     var map_data = {
         type: 'geojson',
