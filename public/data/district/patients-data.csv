@@ -1,4 +1,4 @@
-Prefecture,Prefecture (si),Cases,Recovered,Deaths,longitude,latitude,type,IsShowOnPlay
+prefecture,prefecture_si,cases,recovered,deaths,longitude,latitude,type,IsShowOnPlay
 Colombo District,කොළඹ දිස්ත්‍රික්කය,108342,2,0,79.971264,6.847274,dist,1
 Gampaha District,ගම්පහ දිස්ත්‍රික්කය,90414,1,0,80.02694,7.189221,dist,1
 Kalutara District,කළුතර දිස්ත්‍රික්කය,49699,0,0,80.142188,6.562991,dist,1
