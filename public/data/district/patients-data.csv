@@ -1,26 +1,26 @@
-prefecture,prefecture_si,cases,recovered,deaths,longitude,latitude,type,IsShowOnPlay
-Colombo District,කොළඹ දිස්ත්‍රික්කය,33594,2,0,79.971264,6.847274,dist,1
-Gampaha District,ගම්පහ දිස්ත්‍රික්කය,20856,1,0,80.02694,7.189221,dist,1
-Kalutara District,කළුතර දිස්ත්‍රික්කය,8308,0,0,80.142188,6.562991,dist,1
-Kandy District,මහනුවර දිස්ත්‍රික්කය,4836,0,0,80.658484,7.307723,dist,1
-Kurunegala District,කුරුණෑගල දිස්ත්‍රික්කය,4832,0,0,80.247454,7.64218,dist,1
-Ratnapura District,රත්නපුර දිස්ත්‍රික්කය,3313,0,0,80.590448,6.567805,dist,1
-Galle District,ගාල්ල දිස්ත්‍රික්කය,3031,0,0,80.220642,6.219258,dist,1
-Matara District,මාතර දිස්ත්‍රික්කය,2044,0,0,80.531918,6.15467,dist,1
-Kegalle District,කෑගල්ල දිස්ත්‍රික්කය,1821,0,0,80.334929,7.110939,dist,1
-Puttalam District,පුත්තලම දිස්ත්‍රික්කය,1743,0,0,79.897757,7.953518,dist,1
-Nuwara Eliya District,නුවරඑළිය දිස්ත්‍රික්කය,1721,0,0,80.709376,6.975282,dist,1
-Ampara District,අම්පාර දිස්ත්‍රික්කය,1714,0,0,81.71473,7.183049,dist,1
-Badulla District,බදුල්ල දිස්ත්‍රික්කය,1680,0,0,81.058283,6.988795,dist,1
-Matale District,මාතලේ දිස්ත්‍රික්කය,1637,0,0,80.69274,7.64601,dist,1
-Jaffna District,යාපනය දිස්ත්‍රික්කය,1450,0,0,80.148179,9.742586,dist,1
-Moneragala District,මොණරාගල දිස්ත්‍රික්කය,1054,0,0,81.331699,6.766113,dist,1
-Hambantota District,හම්බන්තොට දිස්ත්‍රික්කය,936,0,0,81.180751,6.258969,dist,1
-Trincomalee District,ත්‍රිකුණාමලය දිස්ත්‍රික්කය,748,0,0,81.088301,8.59258,dist,1
-Anuradhapura District,අනුරාධපුරය දිස්ත්‍රික්කය,742,0,0,80.466936,8.374519,dist,1
-Batticaloa District,මඩකළපුව දිස්ත්‍රික්කය,636,0,0,81.434774,7.807882,dist,1
-Vavuniya District,වවුනියාව දිස්ත්‍රික්කය,473,0,0,80.484929,8.83337,dist,1
-Polonnaruwa District,පොළොන්නරුව දිස්ත්‍රික්කය,331,0,0,81.040063,8.015811,dist,1
-Mannar District,මන්නාරම දිස්ත්‍රික්කය,311,0,0,80.080114,8.86997,dist,1
-Kilinochchi District,කිලිනොච්චිය දිස්ත්‍රික්කය,151,0,0,80.287481,9.388387,dist,1
-Mullaitivu District,මුලතිව් දිස්ත්‍රික්කය,69,0,0,80.514158,9.219403,dist,1
+Prefecture,Prefecture (si),Cases,Recovered,Deaths,longitude,latitude,type,IsShowOnPlay
+Colombo District,කොළඹ දිස්ත්‍රික්කය,108342,2,0,79.971264,6.847274,dist,1
+Gampaha District,ගම්පහ දිස්ත්‍රික්කය,90414,1,0,80.02694,7.189221,dist,1
+Kalutara District,කළුතර දිස්ත්‍රික්කය,49699,0,0,80.142188,6.562991,dist,1
+Kandy District,මහනුවර දිස්ත්‍රික්කය,18883,0,0,80.658484,7.307723,dist,1
+Kurunegala District,කුරුණෑගල දිස්ත්‍රික්කය,24189,0,0,80.247454,7.64218,dist,1
+Ratnapura District,රත්නපුර දිස්ත්‍රික්කය,16847,0,0,80.590448,6.567805,dist,1
+Galle District,ගාල්ල දිස්ත්‍රික්කය,29479,0,0,80.220642,6.219258,dist,1
+Matara District,මාතර දිස්ත්‍රික්කය,11857,0,0,80.531918,6.15467,dist,1
+Kegalle District,කෑගල්ල දිස්ත්‍රික්කය,10616,0,0,80.334929,7.110939,dist,1
+Puttalam District,පුත්තලම දිස්ත්‍රික්කය,11531,0,0,79.897757,7.953518,dist,1
+Nuwara Eliya District,නුවරඑළිය දිස්ත්‍රික්කය,11162,0,0,80.709376,6.975282,dist,1
+Ampara District,අම්පාර දිස්ත්‍රික්කය,14074,0,0,81.71473,7.183049,dist,1
+Badulla District,බදුල්ල දිස්ත්‍රික්කය,11649,0,0,81.058283,6.988795,dist,1
+Matale District,මාතලේ දිස්ත්‍රික්කය,11631,0,0,80.69274,7.64601,dist,1
+Jaffna District,යාපනය දිස්ත්‍රික්කය,10186,0,0,80.148179,9.742586,dist,1
+Moneragala District,මොණරාගල දිස්ත්‍රික්කය,9572,0,0,81.331699,6.766113,dist,1
+Hambantota District,හම්බන්තොට දිස්ත්‍රික්කය,10895,0,0,81.180751,6.258969,dist,1
+Trincomalee District,ත්‍රිකුණාමලය දිස්ත්‍රික්කය,3958,0,0,81.088301,8.59258,dist,1
+Anuradhapura District,අනුරාධපුරය දිස්ත්‍රික්කය,9311,0,0,80.466936,8.374519,dist,1
+Batticaloa District,මඩකළපුව දිස්ත්‍රික්කය,8264,0,0,81.434774,7.807882,dist,1
+Vavuniya District,වවුනියාව දිස්ත්‍රික්කය,3143,0,0,80.484929,8.83337,dist,1
+Polonnaruwa District,පොළොන්නරුව දිස්ත්‍රික්කය,4397,0,0,81.040063,8.015811,dist,1
+Mannar District,මන්නාරම දිස්ත්‍රික්කය,1963,0,0,80.080114,8.86997,dist,1
+Kilinochchi District,කිලිනොච්චිය දිස්ත්‍රික්කය,6388,0,0,80.287481,9.388387,dist,1
+Mullaitivu District,මුලතිව් දිස්ත්‍රික්කය,1732,0,0,80.514158,9.219403,dist,1

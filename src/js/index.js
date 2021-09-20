@@ -9,7 +9,7 @@ export const getModifiedChartData = (timeLineData,type) => {
         var i, skiped_days, visible_days;
 
         if(type === "daily_cases") {
-            skiped_days = 310;
+            skiped_days = 410;
             visible_days =timeLineData.timeline.length-skiped_days;
 
             for (i = visible_days; i >= 0; i--) {
@@ -39,7 +39,7 @@ export const getModifiedChartData = (timeLineData,type) => {
                 legend_labels_fontSize: 10,
                 yAxes_type: 'linear',
                 yAxes_beginAtZero: true,
-                yAxes_stepSize: 250,
+                yAxes_stepSize: 1000,
                 yAxes_fontSize: 7,
                 yAxes_fontColor: 'rgba(255, 255, 255, 0.7)',
                 yAxes_padding: 5,                   
@@ -58,7 +58,7 @@ export const getModifiedChartData = (timeLineData,type) => {
 
         }
         if(type === "local_recovery") {
-            skiped_days = 310;
+            skiped_days = 410;
             visible_days =timeLineData.timeline.length-skiped_days;
 
             for (i = visible_days; i >= 0; i--) {
@@ -88,8 +88,8 @@ export const getModifiedChartData = (timeLineData,type) => {
                 legend_labels_fontSize: 10,
                 yAxes_type: 'linear',
                 yAxes_beginAtZero: true,
-                yAxes_stepSize: 250,
-                yAxes_fontSize: 7,
+                yAxes_stepSize: 3000,
+                yAxes_fontSize: 8,
                 yAxes_fontColor: 'rgba(255, 255, 255, 0.7)',
                 yAxes_padding: 5,                   
                 yAxes_callback: 1e6,           
@@ -158,7 +158,7 @@ export const getModifiedChartData = (timeLineData,type) => {
         }
         if(type === "local_total_vs_active") {
             
-            skiped_days = 14;
+            skiped_days = 410;
             visible_days =timeLineData.timeline.length-skiped_days;
 
             let total = [];
@@ -203,8 +203,8 @@ export const getModifiedChartData = (timeLineData,type) => {
                 legend_labels_fontSize: 11,
                 yAxes_type: 'linear',
                 yAxes_beginAtZero: true,
-                yAxes_stepSize: 20000,
-                yAxes_fontSize: 7,
+                yAxes_stepSize: 150000,
+                yAxes_fontSize: 10,
                 yAxes_fontColor: 'rgba(255, 255, 255, 0.7)',
                 yAxes_padding: 5,                   
                 yAxes_callback_size: 1e3,           
@@ -224,7 +224,7 @@ export const getModifiedChartData = (timeLineData,type) => {
         }
         if(type === "global_total_growth") {
             
-            skiped_days = 2;
+            skiped_days = 410;
             visible_days =timeLineData.length-skiped_days;
 
             let total = [];
@@ -255,7 +255,7 @@ export const getModifiedChartData = (timeLineData,type) => {
                 legend_labels_fontSize: 11,
                 yAxes_type: 'linear',
                 yAxes_beginAtZero: true,
-                yAxes_stepSize: 40000000,
+                yAxes_stepSize: 60000000,
                 yAxes_fontSize: 8,
                 yAxes_fontColor: 'rgba(255, 255, 255, 0.7)',
                 yAxes_padding: 5,               
@@ -326,7 +326,7 @@ export const getModifiedChartData = (timeLineData,type) => {
         }
         if(type === "global_new_vs_recovery") {
             
-            skiped_days = 14;
+            skiped_days = 410;
             visible_days =timeLineData.length-skiped_days;
 
             let new_cases = [];
