@@ -1,8 +1,7 @@
 import React from "react";
 
 // reactstrap components
-import { Container, Row, Col,
-} from "reactstrap";
+import { Container, Row } from "reactstrap";
 
 // sections for this page/view
 import MainContents from "components/Contents/MainContents";

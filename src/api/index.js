@@ -1,11 +1,10 @@
 import axios from 'axios';
 
-const url = 'https://covid19.mathdro.id/api';
-
-var settings = {
+const settings = {
     getCurrentStatistical: "https://www.hpb.health.gov.lk/api/get-current-statistical",
+    apiUrl: "https://corona-api.com/",
     coronaTimeline: "https://corona-api.com/timeline",
-    localTimeline: "https://corona-api.com/countries/lk",
+    localTimeline: "https://corona-api.com/countries/",
 };
 
 export const fetchDailyLocalData = async () => {
@@ -54,79 +53,23 @@ export const fetchDailyGlobalData = async () => {
     }
 }
 
-export const fetchTimeLineData = async () => {
+export const fetchTimeLineData = async (type) => {
     try {
-        const  { data }  = await axios.get(settings.localTimeline);
 
-        const dailyData = data.data;
-
-        let timeline_date = [];
-        let new_confirmed = [];
-        let j=310;
-        let k=dailyData.timeline.length-j;
-
-        let i;
-        for (i = k; i >= 0; i--) {
-            timeline_date.push(dailyData.timeline[i].date.substr(5,5));
-            new_confirmed.push(dailyData.timeline[i].new_confirmed);
+        var url_rest = "";
+        if(type === 'local') {
+            url_rest = "countries/lk";
+        }
+        else if(type === 'global') {
+            url_rest = "timeline";
         }
 
-        const modifiedData = {
-            timeline_date:timeline_date,
-            new_confirmed:new_confirmed,
-        };
+        const url = `${settings.apiUrl}${url_rest}`
+        const  { data }  = await axios.get(url);
+        
+        const dailyData = data.data;
+        return dailyData;
 
-        return modifiedData;
-    }
-    catch (error) {
-        console.log(error);
-    }
-}
-
-
-
-
-/* ---------------------------------------------------- */
-
-export const fetchDailyDataold = async () => {
-    try {
-        const { data } = await axios.get(`${url}/daily`);
-        const modifiedData = data.map((dailyData) => ({
-            confirmed:dailyData.confirmed.total,
-            deaths:dailyData.deaths.total,
-            date:dailyData.reportDate,
-        }));
-
-        return modifiedData;
-    }
-    catch (error) {
-        console.log(error);
-    }
-}
-
-export const fetchCountries = async () => {
-    try {
-        const { data: { countries } } = await axios.get(`${url}/countries`);
-
-        return countries.map((country) => country.name);
-    }
-    catch (error) {
-        console.log(error);
-    }
-}
-
-export const fetchData = async (country) => {
-    let changebleUrl = url;
-
-    if(country) {
-        changebleUrl = `${url}/countries/${country}`
-    }
-
-    try {
-        const {data : { confirmed, recovered, deaths, lastUpdate } } = await axios.get(changebleUrl);
-        const modifiedData = { confirmed, recovered, deaths, lastUpdate };
-
-        return modifiedData;
     }
     catch (error) {
         console.log(error);

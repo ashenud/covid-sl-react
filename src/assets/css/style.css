@@ -397,6 +397,11 @@ body, html {
 }
 /*-- Error UI By samith --*/
 /*-- Map area By samith --*/
+
+.map {
+    height: auto;;
+}
+
 #map-wrapper .map-type-switch{
     margin-left: auto;
     order: 2;
@@ -474,12 +479,13 @@ body, html {
 
 .map-type-switch.switch-wrapper input:checked[type=checkbox]:before {
     left: 16px;
-;
 }
 
-#map.map-si, #map.map-en{
+#map.map-si, 
+#map.map-en,
+#map .mapboxgl-canvas {
     width: 100%;
-    height:620px;
+    max-height:680px;
 }
 
 #map-wrapper .mapboxgl-popup .mapboxgl-popup-content{
@@ -572,8 +578,10 @@ body, html {
 /*-- Map area By samith --*/
 
 @media all and (max-width: 1600px) {
-    #map.map-si, #map.map-en {
-        height: 656px;
+    #map.map-si,
+    #map.map-en,
+    #map .mapboxgl-canvas {
+        height: 680px;
     }
     
     .chart-local-timeline .card-chart{
@@ -596,8 +604,10 @@ body, html {
 }
 
 @media all and (max-width: 1200px) {
-    #map.map-si, #map.map-en {
-        height: 263px;
+    #map.map-si,
+    #map.map-en,
+    #map .mapboxgl-canvas {
+        height: 226px;
     }
     #chart-timelineSi,
     #chart-timeline {
@@ -658,7 +668,9 @@ body, html {
 }
 
 @media all and (max-width: 768px) {
-    #map.map-si, #map.map-en {
+    #map.map-si, 
+    #map.map-en,
+    #map .mapboxgl-canvas {
         height: 600px;
     }
     #chart-timelineSi,
@@ -685,7 +697,9 @@ body, html {
 }
 
 @media all and (max-width: 576px) {
-    #map.map-si, #map.map-en {
+    #map.map-si,
+    #map.map-en,
+    #map .mapboxgl-canvas {
         height: 500px;
     }
     #chart-timelineSi,
@@ -724,7 +738,9 @@ body, html {
         font-weight: 100;
     } */
     
-    #map.map-si, #map.map-en {
+    #map.map-si, 
+    #map.map-en,
+    #map .mapboxgl-canvas {
         height: 375px;
     }
     #chart-timeline {

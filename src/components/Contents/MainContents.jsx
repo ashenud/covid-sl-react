@@ -1,8 +1,11 @@
 import React from "react";
 // sections for this page/view
-import LocalFigures from "views/Figures/LocalFigures";
-import GlobalFigures from "views/Figures/GlobalFigures";
-import LocalTimeLine from "views/Charts/LocalTimeLine";
+import LocalFigures from "views/PageDivisions/LocalFigures";
+import GlobalFigures from "views/PageDivisions/GlobalFigures";
+import LocalTimeLine from "views/PageDivisions/LocalTimeLine";
+import LocalSideBar from "views/PageDivisions/LocalSideBar";
+import GlobalSideBar from "views/PageDivisions/GlobalSideBar";
+import MapArea from "views/PageDivisions/MapArea";
 
 export default function MainContents() {
   return (
@@ -10,6 +13,9 @@ export default function MainContents() {
         <LocalFigures />
         <GlobalFigures />
         <LocalTimeLine />
+        <LocalSideBar />
+        <MapArea />
+        <GlobalSideBar />
     </React.Fragment >
   );
 }

@@ -1,5 +1,5 @@
 {
-  "name": "blk-design-system-react",
+  "name": "covid-sl",
   "version": "1.2.0",
   "description": "React version of BLK Design System by Creative Tim",
   "main": "index.js",
@@ -12,7 +12,7 @@
   "bugs": {
     "url": "https://github.com/creativetimofficial/blk-design-system-react/issues"
   },
-  "homepage": "https://demos.creative-tim.com/blk-design-system-react/#/",
+  "homepage": "./",
   "keywords": [
     "react",
     "reactjs",
@@ -39,8 +39,10 @@
     "bootstrap": "4.5.3",
     "chart.js": "2.9.4",
     "classnames": "2.2.6",
+    "d3": "^6.7.0",
     "gulp": "4.0.2",
     "gulp-append-prepend": "1.0.8",
+    "mapbox-gl": "^2.2.0",
     "moment": "^2.29.1",
     "node-sass": "4.14.1",
     "node-sass-package-importer": "5.3.2",
